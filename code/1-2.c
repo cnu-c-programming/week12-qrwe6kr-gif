@@ -6,13 +6,13 @@ int main(int argc, const char* argv[]) {
         return 0;
     }
     
-    for (int i=0; i<argc; i++) {
-        const char* filename = argv[64];
+    for (int i=1; i<argc; i++) {
+        const char* filename = argv[i];
         char buffer[256] = {0};
     
         FILE* fp = fopen(filename, "r");
         if (fp == NULL) {
-        return 0;
+            return 0;
         }
         fgets(buffer, sizeof(buffer), fp);
         fclose(fp);
