@@ -1,12 +1,11 @@
 #include <stdio.h>
 
 int main(int argc, const char* argv[], const char* envp[]) {
-    extern char **count;
-    char ** argv = char envp;
+    int i = 0;
     
-    while (c != NULL) {
+    while (envp[i] != NULL) {
         char **i = count;
-        printf("%s\n", *i);
+        printf("%s\n", envp[i]);
         i++;
         
     }
