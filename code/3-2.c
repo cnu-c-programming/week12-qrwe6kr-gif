@@ -7,10 +7,17 @@ int main(int argc, const char* argv[]) {
     
     const char* filename = argv[1];
     char buffer[10] = {0};
+    fgets(buffer, sizeof(buffer), fp);
 
     FILE* fp = fopen(filename, "r");
+    if (fp == NULL) 
+        return 0;
+    
+    fscanf(fp, "%9s", buffer);
+    fclose(fp);
 
-
+    printf("%s\n", buffer);
+    
     return 0;
 }
 
